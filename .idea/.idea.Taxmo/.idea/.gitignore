@@ -84,6 +84,7 @@ StyleCopReport.xml
 *.tmp
 *.tmp_proj
 *_wpftmp.csproj
+*.csproj.nuget*
 *.log
 *.vspscc
 *.vssscc
@@ -188,6 +189,8 @@ PublishScripts/
 
 # NuGet Packages
 *.nupkg
+*.nuget.cache
+
 # NuGet Symbol Packages
 *.snupkg
 # The packages folder can be ignored because of Package Restore
@@ -199,6 +202,7 @@ PublishScripts/
 # NuGet v3's project.json files produces more ignorable files
 *.nuget.props
 *.nuget.targets
+*.project.assets.json
 
 # Microsoft Azure Build Output
 csx/
