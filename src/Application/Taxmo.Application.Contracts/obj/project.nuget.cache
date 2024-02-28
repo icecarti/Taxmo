@@ -1,0 +1,14 @@
+{
+  "version": 2,
+  "dgSpecHash": "Hj0WlYk5TzlhinQgnTrppDl3RYwHZsYmIxnr2aYfIQuIg95Ak8Ud27azuxjOp8mg+EC4am7DXfGNPCeGVsFRVA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Admin\\RiderProjects\\Taxmo\\src\\Application\\Taxmo.Application.Contracts\\Taxmo.Application.Contracts.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Admin\\.nuget\\packages\\itmo.dev.editorconfig\\1.0.2\\itmo.dev.editorconfig.1.0.2.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\stylecop.analyzers\\1.2.0-beta.435\\stylecop.analyzers.1.2.0-beta.435.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\stylecop.analyzers.unstable\\1.2.0.435\\stylecop.analyzers.unstable.1.2.0.435.nupkg.sha512",
+    "C:\\Users\\Admin\\.nuget\\packages\\system.linq.async\\6.0.1\\system.linq.async.6.0.1.nupkg.sha512"
+  ],
+  "logs": []
+}
