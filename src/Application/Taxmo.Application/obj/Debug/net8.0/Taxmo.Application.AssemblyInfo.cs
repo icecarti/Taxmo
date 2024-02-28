@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("Taxmo.Application")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+50bfa62adde4caadf45f36921356f07bac8bb906")]
 [assembly: System.Reflection.AssemblyProductAttribute("Taxmo.Application")]
 [assembly: System.Reflection.AssemblyTitleAttribute("Taxmo.Application")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
