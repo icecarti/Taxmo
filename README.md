@@ -111,3 +111,28 @@ responce - ```{"carId": "4w5l6jn4wlk5j6nw4lk56"}```
 Создание аренды - ```POST /api/v1/car-rents```\
 request - ```{"Driver": {"driverId": "string"}, "Car": {"carId": "string"}, "Start date": "yyyy-mm-dd", "End date": "yyyy-mm-dd", "Daily price": "int"}```\
 responce - ```{"carRentId": "4w5l6jn4wlk5j6nw4lk56"}```
+
+Получение информации о ИП - ```GET/api/v1/owners/{ownerId}```
+responce - ```{"IE": "string", "Name": "string", "Phone": "string"}```
+
+Получение информации о такси-парке - ```GET /api/v1/car-parks/{carParkId}```
+responce - ```{"Address": "string", "Postcode": "string", "CarCount": 0}```
+
+Получение информации о водителе - ```GET /api/v1/drivers/{driverId}```
+responce - ```{"Name": "string", "DriverLicense": "string", "Passport": "string", "Phone": "string", "Email": "string"}```
+
+Получение информации о пассажире - ```GET /api/v1/passengers/{passengerId}```
+responce - ```{"Name": "string", "Phone": "string", "Email": "string"}```
+
+Получение информации о заказе - ```GET /api/v1/orders/{orderId}```
+responce - ```{"OrderType": "string", "Date": "yyyy-mm-dd hh:mm:ss", "Driver": {"driverId": "string"}, "Passenger": {"passengerId": "string"}, "Price": 0, "DriverRate": 0, "PassengerRate": 0}```
+
+Получение информации о записи в расписании - ```GET /api/v1/time-worksheets/{timeWorksheetId}```
+responce - ```{"Taxi": {"taxiId": "string"}, "Driver": {"driverId": "string"}, "Date": "yyyy-mm-dd", "HourlySalary": 0, "Hours": 0}```
+
+Получение информации об автомобиле - ```GET /api/v1/cars/{carId}```
+responce - ```{"CarNumber": "string", "Brand": "string", "Model": "string", "Year": "yyyy", "CarPark": {"carParkId": "string"}}```
+
+Апдейт информации об автомобиле - ```PUT /api/v1/cars/{carId}```
+request - ```{"CarNumber": "string", "Brand": "string", "Model": "string", "Year": "yyyy", "CarPark": {"carParkId": "string"}}```
+responce - ```{"carId": "4w5l6jn4wlk5j6nw4lk56"}```
