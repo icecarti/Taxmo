@@ -9,7 +9,7 @@
 | Оспельников Алексей Владимирович |
 
 ## Kanban-доска
-| https://ooplabs.kaiten.ru/space/328957 |
+https://ooplabs.kaiten.ru/space/328957
 
 ## Доменные сущности
 
