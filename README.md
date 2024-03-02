@@ -131,3 +131,15 @@ responce - ```{"CarNumber": "string", "Brand": "string", "Model": "string", "Yea
 Апдейт информации об автомобиле - ```PUT /api/v1/cars/{carId}```
 request - ```{"CarNumber": "string", "Brand": "string", "Model": "string", "Year": "yyyy", "CarPark": {"carParkId": "string"}}```
 responce - ```{"carId": "4w5l6jn4wlk5j6nw4lk56"}```
+
+Отмена заказа - ```DELETE /api/v1/orders/{orderId}```
+request - ```None```
+responce - ```{"message": "Order canceled successfully"}```
+
+Удаление машины - ```DELETE /api/v1/cars/{carId}```
+request - ```None```
+responce - ```{"message": "Car deleted successfully"}```
+
+Удаление водителя - ```DELETE /api/v1/drivers/{driverId}```
+request - ```None```
+responce - ```{"message": "Driver deleted successfully"}```
