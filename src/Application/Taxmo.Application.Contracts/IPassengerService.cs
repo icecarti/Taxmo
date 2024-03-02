@@ -3,9 +3,9 @@
 namespace Taxmo.Application.Contracts;
 public interface IPassengerService
 {
-    void AddPassenger(Passenger newPassenger);
+    Passenger AddPassenger(string name, string phone, string email);
 
-    void ChangePassengerInfo(Passenger passenger);
+    void ChangePassengerInfo(Passenger passenger, string newInfo);
 
     void GetPassengerInfo(Passenger passenger);
 }

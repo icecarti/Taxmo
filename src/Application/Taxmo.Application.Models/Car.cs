@@ -7,4 +7,5 @@ public class Car
     public string Model { get; set; }
     public DateTime? Year { get; set; }
     public CarPark CarPark { get; set; }
+    public Driver Owner { get; set; }
 }
