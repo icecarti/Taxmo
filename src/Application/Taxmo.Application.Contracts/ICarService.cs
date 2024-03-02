@@ -3,7 +3,7 @@
 namespace Taxmo.Application.Contracts;
 public interface ICarService
 {
-    void AddCar(Car newCar);
+    Car AddCar();
 
     void DeleteCar(Car car);
 
