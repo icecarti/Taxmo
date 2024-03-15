@@ -2,9 +2,15 @@
 
 public class CarRent
 {
-    private Driver Driver { get; set; }
-    public Car Car { get; set; }
-    public DateTime StartDate { get; set; } // Not null
+    public CarRent() { }
+
+    public Car? Car { get; set; }
+
+    public DateTime? StartDate { get; set; } // Not null
+
     public DateTime? EndDate { get; set; }
-    public int DailyPrice { get; set; } // Not null, Default = 0
+
+    public int? DailyPrice { get; set; } // Not null, Default = 0
+
+    public Driver? Driver { get; set; }
 }

@@ -1,10 +1,7 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
-        <ProjectReference Include="..\Taxmo.Application.Models\Taxmo.Application.Models.csproj"/>
-    </ItemGroup>
-
-    <ItemGroup>
+        <ProjectReference Include="..\Taxmo.Application.Models\Taxmo.Application.Models.csproj" />
     </ItemGroup>
 
 </Project>

@@ -1,11 +1,11 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <ItemGroup>
-        <ProjectReference Include="..\Taxmo.Application.Models\Taxmo.Application.Models.csproj"/>
+        <ProjectReference Include="..\Taxmo.Application.Models\Taxmo.Application.Models.csproj" />
     </ItemGroup>
 
     <ItemGroup>
-        <PackageReference Include="SourceKit.Generators.Builder"/>
+        <PackageReference Include="SourceKit.Generators.Builder" />
     </ItemGroup>
 
 </Project>

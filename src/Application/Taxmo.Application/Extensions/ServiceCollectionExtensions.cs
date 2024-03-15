@@ -1,6 +1,6 @@
-namespace Taxmo.Application.Extensions;
-
 using Microsoft.Extensions.DependencyInjection;
+
+namespace Taxmo.Application.Extensions;
 
 public static class ServiceCollectionExtensions
 {
