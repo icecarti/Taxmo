@@ -1,19 +1,22 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿namespace Taxmo.Infrastructure.Persistence.Context;
 
-namespace Taxmo.Infrastructure.Persistence.Context;
-
-[Table("drivers")]
 public partial class Driver
 {
-    [Key]
     public int DriverId { get; set; }
 
-    public string? Name { get; set; }
+    public string Name { get; set; } = null!;
 
-    public string? DriverLicense { get; set; } // Unique, Not null
+    public string DriverLicense { get; set; } = null!;
 
-    public string? Passport { get; set; } // Not null, Unique
+    public string Passport { get; set; } = null!;
 
-    public string? Phone { get; set; } // Unique
+    public string? Phone { get; set; }
+
+    public string? Email { get; set; }
+
+    public virtual ICollection<Carrent> Carrents { get; } = new List<Carrent>();
+
+    public virtual ICollection<Taxiorder> Taxiorders { get; } = new List<Taxiorder>();
+
+    public virtual ICollection<Timeworksheet> Timeworksheets { get; } = new List<Timeworksheet>();
 }

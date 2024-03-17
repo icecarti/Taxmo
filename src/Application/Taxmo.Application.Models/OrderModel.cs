@@ -1,8 +1,8 @@
 ﻿namespace Taxmo.Application.Models;
 
-public class Order
+public class OrderModel
 {
-    public Order() { }
+    public OrderModel() { }
 
     public string? OrderType { get; set; } // "taxi" or "personal driver service"
 
@@ -12,9 +12,9 @@ public class Order
 
     public DateTime? EndTime { get; set; }
 
-    public Driver? Driver { get; set; }
+    public DriverModel? Driver { get; set; }
 
-    public Passenger? Passenger { get; set; }
+    public PassengerModel? Passenger { get; set; }
 
     public int? Price { get; set; } // Default = 0
 

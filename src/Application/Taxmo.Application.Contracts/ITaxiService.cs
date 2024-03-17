@@ -3,11 +3,11 @@
 namespace Taxmo.Application.Contracts;
 public interface ITaxiService
 {
-    TaxiCompany AddTaxiCompany(string name, string description, string phone, string owner, DateOnly registrationDate);
+    TaxiCompanyModel AddTaxiCompany(string name, string description, string phone, string owner, DateOnly registrationDate);
 
-    void DeleteTaxiCompany(TaxiCompany taxiCompany);
+    void DeleteTaxiCompany(TaxiCompanyModel taxiCompany);
 
-    void GetTaxiCompanyInfo(TaxiCompany taxiCompany);
+    void GetTaxiCompanyInfo(TaxiCompanyModel taxiCompany);
 
-    void UpdateTaxiCompanyInfo(TaxiCompany taxiCompany, string newInfo);
+    void UpdateTaxiCompanyInfo(TaxiCompanyModel taxiCompany, string newInfo);
 }

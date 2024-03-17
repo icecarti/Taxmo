@@ -3,11 +3,11 @@
 namespace Taxmo.Application.Contracts;
 public interface IDriverService
 {
-    Driver AddDriver(string name, string driverLicense, string passport, string phone, string email);
+    DriverModel AddDriver(string name, string driverLicense, string passport, string phone, string email);
 
-    void RemoveDriver(Driver newDriver);
+    void RemoveDriver(DriverModel newDriver);
 
-    void ChangeDriverInfo(Driver driver, string newInfo);
+    void ChangeDriverInfo(DriverModel driver, string newInfo);
 
-    void GetDriverInfo(Driver driver);
+    void GetDriverInfo(DriverModel driver);
 }

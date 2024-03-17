@@ -7,7 +7,6 @@ using Newtonsoft.Json;
 using System.Data.Entity;
 using Taxmo.Application.Extensions;
 using Taxmo.Infrastructure.Persistence.Context;
-using Taxmo.Infrastructure.Persistence.Contexts;
 using Taxmo.Infrastructure.Persistence.Extensions;
 using Taxmo.Presentation.Http.Extensions;
 
@@ -38,16 +37,16 @@ app.UseSwaggerUI();
 
 app.MapControllers();
 
-app.MapGet("/api/passengers", async (AppDbContext db) => await db.Passengers.ToListAsync());
+app.MapGet("/api/passengers", async (TaxiDbContext db) => await db.Passengers.ToListAsync());
 
-using (var db = new AppDbContext())
+using (var db = new TaxiDbContext())
 {
     // получаем объекты из бд и выводим на консоль
     var users = db.Passengers.ToList();
     Console.WriteLine("Passengers List:");
-    foreach (Passenger u in users)
+    foreach (var u in users)
     {
-        Console.WriteLine($"- {u.Name}");
+        Console.WriteLine($"- {u.Name} - {u.Email} - {u.Phone} ");
     }
 }
 

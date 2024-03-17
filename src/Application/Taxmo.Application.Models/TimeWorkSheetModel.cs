@@ -1,7 +1,9 @@
-﻿namespace Taxmo.Infrastructure.Persistence.Context;
+﻿namespace Taxmo.Application.Models;
 
-public partial class Timeworksheet
+public class TimeWorkSheetModel
 {
+    public TimeWorkSheetModel() { }
+
     public int WorksheetId { get; set; }
 
     public DateOnly Date { get; set; }
@@ -14,7 +16,7 @@ public partial class Timeworksheet
 
     public string? TaxiIe { get; set; }
 
-    public virtual Driver? Driver { get; set; }
+    public virtual DriverModel? Driver { get; set; }
 
-    public virtual Taxi? TaxiIeNavigation { get; set; }
+    public virtual TaxiCompanyModel? TaxiCompany { get; set; }
 }

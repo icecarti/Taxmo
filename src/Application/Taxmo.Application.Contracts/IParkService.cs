@@ -3,13 +3,13 @@
 namespace Taxmo.Application.Contracts;
 internal interface IParkService
 {
-    CarPark AddCarPark(string address, string postCode, int carCount, TaxiCompany company);
+    CarParkModel AddCarPark(string address, string postCode, int carCount, TaxiCompanyModel company);
 
-    void RemoveCarPark(CarPark carPark);
+    void RemoveCarPark(CarParkModel carPark);
 
-    void GetCarsInfo(CarPark carPark, params Car[] cars);
+    void GetCarsInfo(CarParkModel carPark, params CarModel[] cars);
 
-    void GetCarParkInfo(CarPark carPark);
+    void GetCarParkInfo(CarParkModel carPark);
 
-    void UpdateCarParkInfo(CarPark carPark, string newInfo);
+    void UpdateCarParkInfo(CarParkModel carPark, string newInfo);
 }

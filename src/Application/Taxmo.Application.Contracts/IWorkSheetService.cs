@@ -3,11 +3,11 @@
 namespace Taxmo.Application.Contracts;
 public interface IWorkSheetService
 {
-    TimeWorksheet AddWorkSheet(TaxiCompany taxi, Driver driver, DateOnly workDate, int hourlySalary, int hours);
+    TimeWorkSheetModel AddWorkSheet(TaxiCompanyModel taxi, DriverModel driver, DateOnly workDate, int hourlySalary, int hours);
 
-    void RemoveWorkSheet(TimeWorksheet timeWorksheet);
+    void RemoveWorkSheet(TimeWorkSheetModel timeWorksheet);
 
-    void GetWorkInfo(TimeWorksheet timeWorksheet);
+    void GetWorkInfo(TimeWorkSheetModel timeWorksheet);
 
-    void AddWorkInfo(TimeWorksheet timeWorksheet, string newWorkInfo);
+    void AddWorkInfo(TimeWorkSheetModel timeWorksheet, string newWorkInfo);
 }

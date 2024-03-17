@@ -1,7 +1,9 @@
-﻿namespace Taxmo.Infrastructure.Persistence.Context;
+﻿namespace Taxmo.Application.Models;
 
-public partial class Carrent
+public class CarRentModel
 {
+    public CarRentModel() { }
+
     public int RentId { get; set; }
 
     public int? DailyPrice { get; set; }
@@ -14,7 +16,7 @@ public partial class Carrent
 
     public int? DriverId { get; set; }
 
-    public virtual Car? Car { get; set; }
+    public virtual CarModel? Car { get; set; }
 
-    public virtual Driver? Driver { get; set; }
+    public virtual DriverModel? Driver { get; set; }
 }

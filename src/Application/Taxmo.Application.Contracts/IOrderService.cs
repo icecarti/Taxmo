@@ -3,11 +3,11 @@
 namespace Taxmo.Application.Contracts;
 public interface IOrderService
 {
-    Order CreateOrder(Passenger passenger, Driver driver, DateTime beginTime, DateTime endTime, TimeOnly waiting, int price, int driverRate, int passengerRate);
+    OrderModel CreateOrder(PassengerModel passenger, DriverModel driver, DateTime beginTime, DateTime endTime, TimeOnly waiting, int price, int driverRate, int passengerRate);
 
-    void CancelOrder(Order order);
+    void CancelOrder(OrderModel order);
 
-    void FinishOrder(Order order);
+    void FinishOrder(OrderModel order);
 
-    void GetOrderInfo(Order order);
+    void GetOrderInfo(OrderModel order);
 }

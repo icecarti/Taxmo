@@ -1,7 +1,8 @@
-﻿namespace Taxmo.Infrastructure.Persistence.Context;
-
-public partial class Car
+﻿namespace Taxmo.Application.Models;
+public class CarModel
 {
+    public CarModel() { }
+
     public int CarId { get; set; }
 
     public string? CarNumber { get; set; }
@@ -16,7 +17,7 @@ public partial class Car
 
     public int? CarparkId { get; set; }
 
-    public virtual Carpark? Carpark { get; set; }
+    public virtual CarParkModel? CarPark { get; set; }
 
-    public virtual ICollection<Carrent> Carrents { get; } = new List<Carrent>();
+    public virtual ICollection<CarRentModel> Carrents { get; } = new List<CarRentModel>();
 }

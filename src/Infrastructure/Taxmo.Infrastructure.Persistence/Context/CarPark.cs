@@ -1,20 +1,18 @@
-﻿using System.ComponentModel.DataAnnotations;
-using System.ComponentModel.DataAnnotations.Schema;
+﻿namespace Taxmo.Infrastructure.Persistence.Context;
 
-namespace Taxmo.Infrastructure.Persistence.Context;
-
-[Table("carparks")]
-public partial class CarPark
+public partial class Carpark
 {
-    [Key]
-    public int CarParkId { get; set; }
+    public int CarparkId { get; set; }
 
-    public string? Address { get; set; } // Not null
+    public string? Address { get; set; }
 
-    public string? Postcode { get; set; }
+    public string Postcode { get; set; } = null!;
 
-    public int? CarCount { get; set; } // Not null, Default = 0\
+    public string CarCount { get; set; } = null!;
 
-    [ForeignKey("taxies")]
-    public int CompanyId { get; set; }
+    public string? Ie { get; set; }
+
+    public virtual ICollection<Car> Cars { get; } = new List<Car>();
+
+    public virtual Taxi? Taxi { get; set; }
 }
