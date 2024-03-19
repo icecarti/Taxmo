@@ -12,7 +12,7 @@ public partial class Carpark
 
     public string? Ie { get; set; }
 
-    public virtual ICollection<Car> Cars { get; } = new List<Car>();
+    public virtual ICollection<Car> Cars { get; init; } = new List<Car>();
 
     public virtual Taxi? Taxi { get; set; }
 }

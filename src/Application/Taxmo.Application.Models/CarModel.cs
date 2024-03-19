@@ -19,5 +19,5 @@ public class CarModel
 
     public virtual CarParkModel? CarPark { get; set; }
 
-    public virtual ICollection<CarRentModel> Carrents { get; } = new List<CarRentModel>();
+    public virtual ICollection<CarRentModel> Carrents { get; init; } = new List<CarRentModel>();
 }

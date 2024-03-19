@@ -14,7 +14,7 @@ public class CarParkModel
 
     public string? Ie { get; set; }
 
-    public virtual ICollection<CarModel> Cars { get; } = new List<CarModel>();
+    public virtual ICollection<CarModel> Cars { get; init; } = new List<CarModel>();
 
     public virtual TaxiCompanyModel? TaxiCompany { get; set; }
 }

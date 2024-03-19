@@ -10,5 +10,5 @@ public partial class Passenger
 
     public string? Email { get; set; }
 
-    public virtual ICollection<Taxiorder> Taxiorders { get; } = new List<Taxiorder>();
+    public virtual ICollection<Taxiorder> Taxiorders { get; init; } = new List<Taxiorder>();
 }

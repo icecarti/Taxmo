@@ -2,9 +2,9 @@
 
 public partial class Taxiorder
 {
-    public int OrderId { get; set; }
+    public int? OrderId { get; set; }
 
-    public string OrderType { get; set; } = null!;
+    public string? OrderType { get; set; } = null!;
 
     public int? Price { get; set; }
 

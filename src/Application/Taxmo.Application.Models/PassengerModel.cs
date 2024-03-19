@@ -11,5 +11,5 @@ public class PassengerModel
 
     public string? Email { get; set; }
 
-    public virtual ICollection<OrderModel> Taxiorders { get; } = new List<OrderModel>();
+    public virtual ICollection<OrderModel> Taxiorders { get; init; } = new List<OrderModel>();
 }

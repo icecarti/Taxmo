@@ -14,9 +14,9 @@ public partial class Driver
 
     public string? Email { get; set; }
 
-    public virtual ICollection<Carrent> Carrents { get; } = new List<Carrent>();
+    public virtual ICollection<Carrent> Carrents { get; init; } = new List<Carrent>();
 
-    public virtual ICollection<Taxiorder> Taxiorders { get; } = new List<Taxiorder>();
+    public virtual ICollection<Taxiorder> Taxiorders { get; init; } = new List<Taxiorder>();
 
-    public virtual ICollection<Timeworksheet> Timeworksheets { get; } = new List<Timeworksheet>();
+    public virtual ICollection<Timeworksheet> Timeworksheets { get; init; } = new List<Timeworksheet>();
 }

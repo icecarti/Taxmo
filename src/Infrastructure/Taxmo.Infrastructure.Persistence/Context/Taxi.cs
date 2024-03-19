@@ -10,7 +10,7 @@ public partial class Taxi
 
     public DateOnly? RegistrationDate { get; set; }
 
-    public virtual ICollection<Carpark> Carparks { get; } = new List<Carpark>();
+    public virtual ICollection<Carpark> Carparks { get; init; } = new List<Carpark>();
 
-    public virtual ICollection<Timeworksheet> Timeworksheets { get; } = new List<Timeworksheet>();
+    public virtual ICollection<Timeworksheet> Timeworksheets { get; init; } = new List<Timeworksheet>();
 }

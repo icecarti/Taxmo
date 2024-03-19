@@ -4,13 +4,19 @@ public class OrderModel
 {
     public OrderModel() { }
 
+    public int? OrderId { get; set; }
+
     public string? OrderType { get; set; } // "taxi" or "personal driver service"
 
-    public DateTime? BeginTime { get; set; }
+    public DateOnly? StartDate { get; set; }
 
     public TimeOnly? Waiting { get; set; }
 
-    public DateTime? EndTime { get; set; }
+    public DateOnly? EndDate { get; set; }
+
+    public int? PassengerId { get; set; }
+
+    public int? DriverId { get; set; }
 
     public DriverModel? Driver { get; set; }
 

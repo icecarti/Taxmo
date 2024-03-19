@@ -18,5 +18,5 @@ public partial class Car
 
     public virtual Carpark? Carpark { get; set; }
 
-    public virtual ICollection<Carrent> Carrents { get; } = new List<Carrent>();
+    public virtual ICollection<Carrent> Carrents { get; init; } = new List<Carrent>();
 }

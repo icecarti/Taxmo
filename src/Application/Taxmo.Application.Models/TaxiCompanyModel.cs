@@ -11,7 +11,7 @@ public class TaxiCompanyModel
 
     public DateOnly? RegistrationDate { get; set; }
 
-    public virtual ICollection<CarParkModel> Carparks { get; } = new List<CarParkModel>();
+    public virtual ICollection<CarParkModel> Carparks { get; init; } = new List<CarParkModel>();
 
-    public virtual ICollection<TimeWorkSheetModel> Timeworksheets { get; } = new List<TimeWorkSheetModel>();
+    public virtual ICollection<TimeWorkSheetModel> Timeworksheets { get; init; } = new List<TimeWorkSheetModel>();
 }
