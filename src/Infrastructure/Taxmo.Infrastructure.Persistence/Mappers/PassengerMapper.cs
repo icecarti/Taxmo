@@ -6,15 +6,31 @@ public static class PassengerMapper
 {
     public static Passenger MapTo(PassengerModel model)
     {
-        var taxiorders = model.Taxiorders
+        var taxiorders = model
+            .Taxiorders
             .Select(TaxiorderMapper.MapTo);
-        return new Passenger { Name = model.Name, Email = model.Email, PassengerId = model.PassengerId, Phone = model.Phone, Taxiorders = (ICollection<Taxiorder>)taxiorders };
+        return new Passenger
+        {
+            Name = model.Name,
+            Email = model.Email,
+            PassengerId = model.PassengerId,
+            Phone = model.Phone,
+            Taxiorders = (ICollection<Taxiorder>)taxiorders,
+        };
     }
 
     public static PassengerModel MapFrom(Passenger entity)
     {
-        var taxiorders = entity.Taxiorders
+        var taxiorders = entity
+            .Taxiorders
             .Select(TaxiorderMapper.MapFrom);
-        return new PassengerModel { Name = entity.Name, Email = entity.Email, PassengerId = entity.PassengerId, Phone = entity.Phone, Taxiorders = (ICollection<OrderModel>)taxiorders };
+        return new PassengerModel
+        {
+            Name = entity.Name,
+            Email = entity.Email,
+            PassengerId = entity.PassengerId,
+            Phone = entity.Phone,
+            Taxiorders = (ICollection<OrderModel>)taxiorders,
+        };
     }
 }

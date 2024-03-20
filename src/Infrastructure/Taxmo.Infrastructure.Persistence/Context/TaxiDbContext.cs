@@ -13,21 +13,21 @@ public partial class TaxiDbContext : DbContext
     {
     }
 
-    public virtual DbSet<Car> Cars { get; set; }
+    public virtual DbSet<Car>? Cars { get; set; }
 
-    public virtual DbSet<Carpark> Carparks { get; set; }
+    public virtual DbSet<Carpark>? Carparks { get; set; }
 
-    public virtual DbSet<Carrent> Carrents { get; set; }
+    public virtual DbSet<Carrent>? Carrents { get; set; }
 
-    public virtual DbSet<Driver> Drivers { get; set; }
+    public virtual DbSet<Driver>? Drivers { get; set; }
 
-    public virtual DbSet<Passenger> Passengers { get; set; }
+    public virtual DbSet<Passenger>? Passengers { get; set; }
 
-    public virtual DbSet<Taxiorder> Taxiorders { get; set; }
+    public virtual DbSet<Taxiorder>? Taxiorders { get; set; }
 
-    public virtual DbSet<Taxi> Taxies { get; set; }
+    public virtual DbSet<Taxi>? Taxies { get; set; }
 
-    public virtual DbSet<Timeworksheet> Timeworksheets { get; set; }
+    public virtual DbSet<Timeworksheet>? Timeworksheets { get; set; }
 
     protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         => optionsBuilder.UseNpgsql("Host=ep-jolly-sun-a2wj47cv-pooler.eu-central-1.aws.neon.tech;Port=5432;Database=TaxiDB;Username=TaxiDB_owner;Password=vw4TIdSLze0R;SSL Mode=Require;");
