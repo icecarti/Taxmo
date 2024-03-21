@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Taxmo.Application.Abstractions.Persistence;
-using Taxmo.Infrastructure.Persistence.Contexts;
+using Taxmo.Infrastructure.Persistence.Context;
 using Taxmo.Infrastructure.Persistence.Migrations;
 using Taxmo.Infrastructure.Persistence.Plugins;
 
@@ -23,7 +23,7 @@ public static class ServiceCollectionExtensions
         // TODO: add repositories
         collection.AddScoped<IPersistenceContext, PersistenceContext>();
 
-        collection.AddDbContext<AppDbContext>(options => options.UseNpgsql(configuration["Infrastructure:Persistence:Postgres:ConnectionString"]));
+        collection.AddDbContext<TaxiDbContext>(options => options.UseNpgsql(configuration["Infrastructure:Persistence:Postgres:ConnectionString"]));
 
         return collection;
     }
