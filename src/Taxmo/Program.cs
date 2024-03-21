@@ -42,7 +42,7 @@ app.MapGet("/api/passengers", async (TaxiDbContext db) => await db.Passengers.To
 using (var db = new TaxiDbContext())
 {
     // получаем объекты из бд и выводим на консоль
-    var users = db.Passengers!.ToList();
+    var users = db.Passengers.ToList();
     Console.WriteLine("Passengers List:");
     foreach (var u in users)
     {
