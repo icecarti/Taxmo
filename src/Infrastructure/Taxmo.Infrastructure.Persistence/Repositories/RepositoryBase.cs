@@ -13,33 +13,34 @@ public abstract class RepositoryBase<TEntity, TModel> where TEntity : class
 
     protected abstract DbSet<TEntity> DbSet { get; }
 
-    public void Add(TModel model)
+    public Task Add(TModel model)
     {
         TEntity entity = MapTo(model);
         DbSet.Add(entity);
+        return Task.CompletedTask;
     }
 
-    public void Update(TModel model)
+    public Task Update(TModel model)
     {
         EntityEntry entry = GetEntry(model);
         UpdateModel((TEntity)entry.Entity, model);
 
         entry.State = EntityState.Modified;
+        return Task.CompletedTask;
     }
 
-    public void Remove(TModel model)
+    public Task Remove(TModel model)
     {
         EntityEntry entry = GetEntry(model);
         entry.State = entry.State is EntityState.Added ? EntityState.Detached : EntityState.Deleted;
+        return Task.CompletedTask;
     }
 
     protected abstract TEntity MapTo(TModel model);
 
     protected abstract bool Equal(TEntity entity, TModel model);
 
-    protected abstract bool UpdateModel(TEntity entity, TModel model);
-
-    protected abstract TModel GetById(int id);
+    protected abstract void UpdateModel(TEntity entity, TModel model);
 
     private EntityEntry GetEntry(TModel model)
     {

@@ -1,4 +1,5 @@
 ﻿using Taxmo.Application.Models;
+using Taxmo.Infrastructure.Persistence.Context;
 using Taxmo.Infrastructure.Persistence.Repositories.Queries;
 
 namespace Taxmo.Infrastructure.Persistence.Repositories.Interfaces;
@@ -6,9 +7,11 @@ public interface ICarRentRepository
 {
     IAsyncEnumerable<CarRentModel> QueryAsync(CarRentQuery query);
 
-    void AddAsync(CarRentModel model);
+    IQueryable<Carrent> BuildQuery(IQueryable<Carrent> rentQueryable, CarRentQuery query);
 
-    void UpdateAsync(CarRentModel model);
+    void AddAsync(CarRentModel carrent);
 
-    void CloseAsync(CarRentModel model);
+    void UpdateAsync(CarRentModel carrent);
+
+    void CloseAsync(CarRentModel carrent);
 }

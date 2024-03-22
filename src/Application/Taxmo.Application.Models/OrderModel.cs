@@ -4,7 +4,7 @@ public class OrderModel
 {
     public OrderModel() { }
 
-    public int? OrderId { get; set; }
+    public int OrderId { get; set; }
 
     public string? OrderType { get; set; } // "taxi" or "personal driver service"
 
